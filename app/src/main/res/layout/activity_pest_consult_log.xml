@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:id="@+id/pesContLinLay"
+    tools:context="com.example.danielt.pestcontrol.PestConsultLog"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Name Display"
+            android:id="@+id/txtVPestControlNameDisplay"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="LIcense Num"
+            android:id="@+id/txtVPestControlLicNumDisplay"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtVPestControlNameDisplay"
+            android:layout_toEndOf="@+id/txtVPestControlNameDisplay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date"
+            android:id="@+id/txtVPestControlDateDisplay"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtVPestControlLicNumDisplay"
+            android:layout_toEndOf="@+id/txtVPestControlLicNumDisplay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Address "
+            android:ems="10"
+            android:id="@+id/txtVPestControlAddress"
+            android:layout_below="@+id/txtVPestControlNameDisplay"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/edTPestControlAddress"
+            android:layout_below="@+id/txtVPestControlLicNumDisplay"
+            android:layout_alignLeft="@+id/txtVPestControlLicNumDisplay"
+            android:layout_alignStart="@+id/txtVPestControlLicNumDisplay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Country Code"
+            android:id="@+id/txVPestControlCountryCode"
+            android:layout_below="@+id/txtVPestControlAddress"
+            android:layout_toLeftOf="@+id/edTPestControlAddress"
+            android:layout_toStartOf="@+id/edTPestControlAddress" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edTPestControlCountyInput"
+            android:layout_below="@+id/txVPestControlCountryCode"
+            android:layout_toRightOf="@+id/txVPestControlCountryCode"
+            android:layout_toEndOf="@+id/txVPestControlCountryCode" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Time In:"
+            android:id="@+id/txVPestControlTimeInDisplay"
+            android:layout_below="@+id/edTPestControlCountyInput"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press to set time"
+            android:textSize="16dp"
+            android:id="@+id/btnPestControlTime"
+
+            android:layout_toRightOf="@+id/txVPestControlTimeInDisplay"
+
+            android:layout_alignTop="@+id/txVPestControlTimeInDisplay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Common Areas Serviced "
+            android:id="@+id/txtVPestControlCommonAreas"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/txVPestControlTimeInDisplay"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Switch"
+            android:id="@+id/switch1"
+            android:layout_alignTop="@+id/txtVPestControlCommonAreas"
+            android:layout_toRightOf="@+id/txtVPestControlCommonAreas"
+            android:layout_toEndOf="@+id/txtVPestControlCommonAreas" />
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp" />
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVTestPlace"
+        android:layout_weight="0.11" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:layout_marginTop="30dp"
+        android:id="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button4"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

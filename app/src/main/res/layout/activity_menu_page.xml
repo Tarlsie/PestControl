@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.danielt.pestcontrol.MenuPage">
+
+    <TextView
+        android:id="@+id/txtVMenuPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello_world" />
+
+    <LinearLayout
+        android:id="@+id/LinMenuPageBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCFF33"
+        android:clickable="true"
+        android:layout_below="@+id/txtVMenuPageTitle"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtVSheet1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Technician daily\n Work Log"
+            android:textSize="16dp" />
+
+        <ImageButton
+            android:id="@+id/imgBMenuPageTechWork"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/txtVSheet1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/tech_daily" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinMenuPageBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:layout_below="@+id/txtVMenuPageTitle"
+        android:orientation="vertical"
+        android:layout_marginRight="30dp"
+        android:background="#CCFF33"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/txtVSheet2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBMenuPageTechWork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Pest Control\n Log"
+            android:textSize="16dp" />
+
+        <ImageButton
+            android:id="@+id/imgBMenuPagePestLog"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/txtVSheet2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/log2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinMenuPageBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/LinMenuPageBox1"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCFF33">
+
+        <TextView
+            android:id="@+id/txtVSheet3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBMenuPagePestLog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Individual \nCustomer"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imgBMenupageIndCust"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/txtVSheet3"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sheet3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinMenuPageBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/LinMenuPageBox2"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCFF33">
+
+        <TextView
+            android:id="@+id/txtVSheet4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBMenupageIndCust"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Special \nRequests"
+            android:textSize="18dp" />
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/txtVSheet4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/personal_service"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinMenuPageBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinMenuPageBox3"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:background="#CCFF33"
+       >
+
+        <TextView
+            android:id="@+id/txtVSheet5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBSpecRequest"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Service Report \nAddendum"
+            android:textSize="18dp" />
+
+        <ImageButton
+            android:id="@+id/imgBAddendum"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/txtVSheet5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/service_addendum"
+            android:longClickable="false"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMenuPage"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_below="@+id/LinMenuPageBox5"
+        android:layout_centerHorizontal="true"
+        android:text="New Button" />
+
+
+</RelativeLayout>

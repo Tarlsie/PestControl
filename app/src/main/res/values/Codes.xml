@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Methods_Of_Treatment">
+        <item name="AA">Crack and crevice</item>
+        <item name="BB">Spot Application</item>
+        <item name="CC">Fan Spray</item>
+        <item name="DD">Broadcast</item>
+        <item name="EE">Dust</item>
+        <item name="FF">Fumigation</item>
+        <item name="GG">Total Release Aerosol</item>
+        <item name="HH">Space Spray</item>
+        <item name="II">ULV</item>
+        <item name="JJ">Granules</item>
+        <item name="KK">Insect Bait</item>
+        <item name="LL">Bait Packs</item>
+        <item name="MM">Other ____</item>
+        <item name="NN">Other ____</item>
+    </string-array>
+<string-array name="Application_Location_Units">
+    <item name="1">Kitchen</item>
+    <item name="2">Bathroom</item>
+    <item name="3">Living Room</item>
+    <item name="4">Closet</item>
+    <item name="5">Dining Room</item>
+    <item name="6">Hallway</item>
+    <item name="7">Bedroom</item>
+    <item name="8">Other</item>
+</string-array>
+    <string-array name="Application_Location_Common_Areas">
+    <item name="9">Boiler/Tank Rooms</item>
+    <item name="10">Mechanical Room</item>
+    <item name="11">Locker Room</item>
+    <item name="12">Offices</item>
+    <item name="13">Pipe Tunnels</item>
+    <item name="14">Laundry Room</item>
+    <item name="15">Garbage Chutes</item>
+    <item name="16">Utility Room</item>
+    <item name="17">Elevator Room</item>
+    <item name="18">Community Room</item>
+    <item name="19">Hallway/Stairwell</item>
+    <item name="20">Basement</item>
+    <item name="21">Storage Room</item>
+    <item name="22">____________</item>
+
+</string-array>
+
+    <string-array name="Application_Site">
+        <item name="PP">Baseboards</item>
+        <item name="QQ">Cabinets</item>
+        <item name="RR">Carpeting</item>
+        <item name="SS">Mattress</item>
+        <item name="TT">Furniture</item>
+        <item name="UU">Box Spring</item>
+        <item name="VV">Walls</item>
+        <item name="WW">Bed Frame</item>
+        <item name="XX">Perimeter</item>
+        <item name="YY">Under/Behind Appliances</item>
+        <item name="ZZ">Other _____</item>
+
+    </string-array>
+
+    <string-array name="Target_Pest">
+        <item name="11">Ants</item>
+        <item name="22">Cockroach</item>
+        <item name="33">Crickets</item>
+        <item name="44">Mice</item>
+        <item name="55">Mites</item>
+        <item name="66">Rats</item>
+        <item name="77">Silverfish</item>
+        <item name="88">Spiders</item>
+        <item name="99">Other _____</item>
+
+    </string-array>
+
+
+</resources>

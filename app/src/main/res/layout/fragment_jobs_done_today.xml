@@ -1,0 +1,377 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|top"
+    android:orientation="vertical"
+    tools:context="com.example.danielt.pestcontrol.JobsDoneToday">
+
+    <TableLayout
+        android:id="@+id/tblLayJobsDone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/tableRowTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtVJobsToDoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="Jobs To Do"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableTitleLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center_horizontal"
+                android:text="Address, City, State" />
+
+            <TextView
+                android:id="@+id/txtVTableTitleRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Conditional/\nreportable items" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableRow1StartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Appt Time" />
+
+            <TextView
+                android:id="@+id/txtVTableRow1Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableRow1Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+            <TextView
+                android:id="@+id/txtVTableRow1Completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Not Completed" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableRow2StartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Appt Time" />
+
+            <TextView
+                android:id="@+id/txtVTableRow2Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableRow2Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+            <TextView
+                android:id="@+id/txtVTableRow2Completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Not Completed" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableRow3StartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Appt Time" />
+
+            <TextView
+                android:id="@+id/txtVTableRow3Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableRow3Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+            <TextView
+                android:id="@+id/txtVTableRow3Completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Not Completed" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableRow4StartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Appt Time" />
+
+            <TextView
+                android:id="@+id/txtVTableRow4Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableRow4Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+            <TextView
+                android:id="@+id/txtVTableRow4Completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Not Completed" />
+        </TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddExtra"
+            android:text="Add extra jobs"/>
+        <TableRow
+            android:id="@+id/tableRowNotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/jobsCompletedTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="Jobs Completed"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowNotDoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneTitleLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center_horizontal"
+                android:text="Address, City, State" />
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneTitleRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Conditional/\nreportable items" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row1NotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow1Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow1Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row2NotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow2Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow2Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row3NotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow3Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow3Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row4NotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow4Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center_horizontal"
+                android:text="Address1" />
+
+            <TextView
+                android:id="@+id/txtVTableNotDoneRow4Conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Conditions" />
+
+        </TableRow>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            android:text="Update"/>
+    </TableLayout>
+
+</ScrollView>
+
+
+

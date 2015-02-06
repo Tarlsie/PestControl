@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.danielt.pestcontrol" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuPage"
+            android:label="@string/title_activity_menu_page" >
+        </activity>
+        <activity
+            android:name=".TechDailyWorkLog"
+            android:label="@string/title_activity_tech_daily_work_log" >
+        </activity>
+        <activity
+            android:name=".PestConsultLog"
+            android:label="@string/title_activity_pest_consult_log" >
+        </activity>
+        <activity
+            android:name=".IndivCustomer"
+            android:label="@string/title_activity_indiv_customer" >
+        </activity>
+        <activity
+            android:name=".SpecialRequest"
+            android:label="@string/title_activity_special_request" >
+        </activity>
+        <activity
+            android:name=".SpecialReportAdden"
+            android:label="@string/title_activity_special_report_adden" >
+        </activity>
+        <activity
+            android:name=".LoginFragment"
+            android:label="@string/title_activity_login_fragment" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.danielt.pestcontrol.SignInFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sign In"
+        android:id="@+id/txtVSignIn"
+        android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name:"
+        android:id="@+id/txtVSignInName"
+        android:layout_gravity="left|top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="41dp" />
+
+    <EditText
+        android:layout_width="@dimen/abc_text_size_display_4_material"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="textPersonName"
+        android:id="@+id/edVSignInname"
+        android:layout_alignTop="@+id/txtVSignInName"
+        android:layout_toRightOf="@+id/txtVSignInName"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Id Number:"
+        android:id="@+id/txtVSignInIDNum"
+        android:layout_below="@+id/txtVSignInName"
+        android:layout_alignLeft="@+id/txtVSignInName"
+        android:layout_alignStart="@+id/txtVSignInName"
+        android:layout_marginTop="26dp" />
+    <EditText
+        android:layout_width="@dimen/abc_text_size_display_4_material"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="number"
+        android:id="@+id/edVSignInIDNum"
+        android:layout_alignTop="@+id/txtVSignInIDNum"
+        android:layout_alignLeft="@+id/edVSignInname"
+        android:layout_alignStart="@+id/edVSignInname" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:id="@+id/btnSignInEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edVSignInIDNum"
+
+        android:layout_marginTop="67dp" />
+
+
+</RelativeLayout>

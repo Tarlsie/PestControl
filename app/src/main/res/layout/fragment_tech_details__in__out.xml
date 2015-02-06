@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="center_horizontal|top"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    tools:context="com.example.danielt.pestcontrol.TechDetails_In_Out">
+
+    <TextView
+        android:id="@+id/txtVTechNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:text="Technician's Name:"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtVDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/txtVTechNameDisplay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="20dp" />
+
+
+    <Button
+        android:id="@+id/btnTimeIn"
+        style="@style/Widget.AppCompat.Light.PopupMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtVDateTitle"
+        android:layout_marginTop="16dp"
+        android:text="Set Time In" />
+
+    <TextView
+        android:id="@+id/txtVTimeInDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTimeIn"
+        android:layout_alignLeft="@+id/btnTimeIn"
+        android:layout_marginTop="16dp"
+        android:text="Time In Display"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btntimeOut"
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Set Time Out"
+        android:layout_alignTop="@+id/btnTimeIn" />
+
+
+    <TextView
+        android:id="@+id/txtVTimeOutDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btntimeOut"
+        android:layout_below="@+id/btntimeOut"
+        android:layout_marginTop="16dp"
+        android:text="Time Out Display"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>

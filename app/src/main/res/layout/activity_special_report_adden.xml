@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.danielt.pestcontrol.SpecialReportAdden"
+    android:id="@+id/RellayAddenComments">
+
+    <TextView
+        android:id="@+id/txtVAddendumTitle" android:text="Service Report Addendum" android:textStyle="bold" android:layout_centerHorizontal="true" android:elegantTextHeight="true" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/txtVAddendumTechName"
+        android:layout_below="@+id/txtVAddendumTitle"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technician Name: "
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/txtVAddendumDate"
+        android:layout_below="@+id/txtVAddendumTechName"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="18sp"
+        />
+    <ScrollView
+        android:id="@+id/scrlVAddendum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVAddendumDate">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AddenLinLayHolder"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AddenLinLayInnerHolder"
+                android:orientation="vertical">
+
+
+                <fragment
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.example.danielt.pestcontrol.AddendumLinInputFragment"
+                    android:id="@+id/addendum1CommentsFragment"
+                    android:layout_below="@+id/txtVAddendum1Date"
+                    android:layout_marginTop="24dp"
+                    tools:layout="@layout/fragment_addendum_lin_input" />
+
+                <LinearLayout
+                    android:id="@+id/fragmentHolder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add another Addendum Comment"
+                android:id="@+id/btnAddendumAddComment"
+                android:layout_below="@+id/scrlVAddendum"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save / Update Comments"
+                android:id="@+id/btnAddendumSave"
+                android:layout_below="@+id/btnAddendumAddComment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
+

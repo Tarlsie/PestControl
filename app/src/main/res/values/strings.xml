@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PestControl</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu_page">MenuPage</string>
+    <string name="title_activity_tech_daily_work_log">TechDailyWorkLog</string>
+    <string name="title_activity_pest_consult_log">PestConsultLog</string>
+    <string name="title_activity_indiv_customer">IndivCustomer</string>
+    <string name="title_activity_special_request">SpecialRequest</string>
+    <string name="title_activity_special_report_adden">SpecialReportAdden</string>
+    <string name="title_activity_login_fragment">loginFragment</string>
+
+</resources>

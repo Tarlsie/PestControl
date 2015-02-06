@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.danielt.pestcontrol.SpecialReportAdden1"
+    android:id="@+id/RellayAdden1Comments">
+
+    <TextView
+        android:id="@+id/txtVAddendum1Title" android:text="Service Report Addendum" android:textStyle="bold" android:layout_centerHorizontal="true" android:elegantTextHeight="true" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/txtVAddendum1TechName"
+        android:layout_below="@+id/txtVAddendum1Title"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technician Name: "
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/txtVAddendum1Date"
+        android:layout_below="@+id/txtVAddendum1TechName"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="18sp"
+        />
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.danielt.pestcontrol.AddendumLinInputFragment"
+        android:id="@+id/addendum1CommentsFragment"
+        android:layout_below="@+id/txtVAddendum1Date"
+        android:layout_marginTop="24dp"
+        tools:layout="@layout/fragment_addendum_lin_input" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add another Addendum Comment"
+        android:id="@+id/btnAddendum1AddComment"
+        android:layout_below="@+id/addendum1CommentsFragment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save / Update Comments"
+        android:id="@+id/btnAddendum1Save"
+        android:layout_below="@+id/btnAddendum1AddComment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+
+</RelativeLayout>
