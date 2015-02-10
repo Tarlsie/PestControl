@@ -22,7 +22,8 @@
             android:id="@+id/txtVPestControlNameDisplay"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,8 +32,7 @@
             android:text="LIcense Num"
             android:id="@+id/txtVPestControlLicNumDisplay"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/txtVPestControlNameDisplay"
-            android:layout_toEndOf="@+id/txtVPestControlNameDisplay" />
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,8 +41,8 @@
             android:text="Date"
             android:id="@+id/txtVPestControlDateDisplay"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/txtVPestControlLicNumDisplay"
-            android:layout_toEndOf="@+id/txtVPestControlLicNumDisplay" />
+            android:layout_alignParentRight="true"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,45 +51,21 @@
             android:text="Address "
             android:ems="10"
             android:id="@+id/txtVPestControlAddress"
+            android:layout_marginTop="24dp"
             android:layout_below="@+id/txtVPestControlNameDisplay"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:id="@+id/edTPestControlAddress"
-            android:layout_below="@+id/txtVPestControlLicNumDisplay"
-            android:layout_alignLeft="@+id/txtVPestControlLicNumDisplay"
-            android:layout_alignStart="@+id/txtVPestControlLicNumDisplay" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Country Code"
-            android:id="@+id/txVPestControlCountryCode"
-            android:layout_below="@+id/txtVPestControlAddress"
-            android:layout_toLeftOf="@+id/edTPestControlAddress"
-            android:layout_toStartOf="@+id/edTPestControlAddress" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/edTPestControlCountyInput"
-            android:layout_below="@+id/txVPestControlCountryCode"
-            android:layout_toRightOf="@+id/txVPestControlCountryCode"
-            android:layout_toEndOf="@+id/txVPestControlCountryCode" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="8dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Time In:"
             android:id="@+id/txVPestControlTimeInDisplay"
-            android:layout_below="@+id/edTPestControlCountyInput"
+            android:layout_below="@+id/txtVPestControlAddress"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -97,66 +73,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Press to set time"
+            android:layout_marginLeft="20dp"
             android:textSize="16dp"
             android:id="@+id/btnPestControlTime"
-
+            android:paddingTop="-8dp"
             android:layout_toRightOf="@+id/txVPestControlTimeInDisplay"
 
             android:layout_alignTop="@+id/txVPestControlTimeInDisplay" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Common Areas Serviced "
-            android:id="@+id/txtVPestControlCommonAreas"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/txVPestControlTimeInDisplay"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+
+
 
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Switch"
-            android:id="@+id/switch1"
-            android:layout_alignTop="@+id/txtVPestControlCommonAreas"
-            android:layout_toRightOf="@+id/txtVPestControlCommonAreas"
-            android:layout_toEndOf="@+id/txtVPestControlCommonAreas" />
+            android:text="Has the Manager or Super allowed you permission to enter the property?"
+            android:id="@+id/swtManagerPermission"
+            android:layout_below="@+id/txVPestControlTimeInDisplay"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Base.TextAppearance.AppCompat.Widget.Switch"
+            android:showText="true"
+            android:textOn="YES"
+            android:textOff="NO"
+            />
+
+
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you need to service the Common Areas?"
+            android:id="@+id/swtServiceCommonAreas"
+            android:layout_below="@+id/swtManagerPermission"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            style="@style/Base.TextAppearance.AppCompat.Widget.Switch"
+            android:showText="true"
+            android:textOn="YES"
+            android:textOff="NO"
+            />
+
+
     </RelativeLayout>
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp" />
-
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtVTestPlace"
-        android:layout_weight="0.11" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:layout_marginTop="30dp"
-        android:id="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
+        android:text="Press to continue"
+        android:id="@+id/BtnMaintenceLog1"
+        android:layout_marginTop="24dp"
         android:layout_gravity="center_horizontal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button4"
-        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

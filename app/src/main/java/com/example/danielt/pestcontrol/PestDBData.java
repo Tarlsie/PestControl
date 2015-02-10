@@ -154,8 +154,8 @@ public class PestDBData extends SQLiteOpenHelper {
         db = dbHelper.getWritableDatabase();
         ContentValues newcv = new ContentValues();
 
-        newcv.put(PestDBData.TECHNAME, username);
-        newcv.put(PestDBData.LICENSE, pass);
+        newcv.put(TECHNAME, username);
+        newcv.put(LICENSE, pass);
         Long result = db.insert(PestDBData.TABLE_TECHDATA, null, newcv);
         Log.i("DB result", result.toString());
 
@@ -239,10 +239,10 @@ public class PestDBData extends SQLiteOpenHelper {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
-        cv.put(PestDBData.DATE, date);
-        cv.put(PestDBData.TIME_IN_DAILY, timeInDaily);
+        cv.put(DATE, date);
+        cv.put(TIME_IN_DAILY, timeInDaily);
 
-        long result = db.insert(PestDBData.TABLE_TECH_DAILY_LOGIN_OUT, null, cv); //may need to make timeout nullvariable
+        long result = db.insert(TABLE_TECH_DAILY_LOGIN_OUT, null, cv); //may need to make timeout nullvariable
         db.close();
         Log.i("TechDailyLogin_Out Login Data", "insert time In Success "+String.valueOf(result));
         return result;
@@ -256,11 +256,11 @@ public class PestDBData extends SQLiteOpenHelper {
 
         ContentValues cv = new ContentValues();
         //cv.put(PestDBData.DATE, date);
-        cv.put(PestDBData.TIME_OUT_DAILY, timeOutDaily);
+        cv.put(TIME_OUT_DAILY, timeOutDaily);
 
         //check these
         String forDate = "";
-        long result = db.update(PestDBData.TABLE_TECH_DAILY_LOGIN_OUT, cv, KEY_ID + " = ? ", null); //not sure this is correct
+        long result = db.update(TABLE_TECH_DAILY_LOGIN_OUT, cv, DATE + " = "+date, null); //not sure this is correct
         db.close();
         Log.i("TechDailyLogin_Out LogOut Data", "insert time Out Success "+String.valueOf(result));
         return result;
@@ -270,7 +270,7 @@ public class PestDBData extends SQLiteOpenHelper {
     public Cursor getTechDailyLogIn_OutData (int id){
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "select * from "+PestDBData.TABLE_TECH_DAILY_LOGIN_OUT;
+        String query = "select * from "+TABLE_TECH_DAILY_LOGIN_OUT;
 
         Cursor data = db.rawQuery(query, null);
         db.close();
@@ -293,12 +293,12 @@ public class PestDBData extends SQLiteOpenHelper {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
-        cv.put(PestDBData.ADDRESS, address);
-        cv.put(PestDBData.DATE, date);
-        cv.put(PestDBData.APT_TIME, aptTime);
-        cv.put(PestDBData.COMPLETE, complete);
-        cv.put(PestDBData.CONDITIONS, conditions);
-        long result = db.insert(PestDBData.TABLE_DAILYLOG,PestDBData.CONDITIONS, cv);
+        cv.put(ADDRESS, address);
+        cv.put(DATE, date);
+        cv.put(APT_TIME, aptTime);
+        cv.put(COMPLETE, complete);
+        cv.put(CONDITIONS, conditions);
+        long result = db.insert(TABLE_DAILYLOG,CONDITIONS, cv);
         db.close();
         Log.i("insert completed", String.valueOf(result));
         return result;
@@ -313,14 +313,26 @@ public class PestDBData extends SQLiteOpenHelper {
         cv.put(COMPLETE, complete);
 
         String update = "";
-        long result = db.update(TABLE_DAILYLOG, cv, KEY_ID +" = ? ", null);
+        long result = db.update(TABLE_DAILYLOG, cv, KEY_ID +" = "+id, null);
         db.close();
         Log.i("update daily log ", "is completed success");
         return result;
     }
 
-    public long update_Daily_Log_Conditions(int i){
-        
+    public long update_Daily_Log_Conditions(int id, String conditions){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Log.i("update to daily log", "Conditions for id: "+id+" conditions "+conditions);
+
+        ContentValues cv = new ContentValues();
+        cv.put(CONDITIONS, conditions);
+
+        long result = db.update(TABLE_DAILYLOG, cv, KEY_ID +"="+ id, null);
+        db.close();
+        Log.i("Daily Log Conditions Update","successful");
+
+        return result;
     }
 
     //Functions for Multiple_unit_Gen_Data table
@@ -341,19 +353,37 @@ public class PestDBData extends SQLiteOpenHelper {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
-        cv.put(PestDBData.ADDRESS, address);
-        cv.put(PestDBData.SIGNATURE, signature);
-        cv.put(PestDBData.ADDEN_COMMENT, addenComments);
-        cv.put(PestDBData.TIME_IN, time_in);
-        cv.put(PestDBData.ALLOWED_ENTRY,allowedEntry);
-        cv.put(PestDBData.COMMON_AREAS_SERVICED, commonAreasServiced);
+        cv.put(ADDRESS, address);
+        cv.put(SIGNATURE, signature);
+        cv.put(ADDEN_COMMENT, addenComments);
+        cv.put(TIME_IN, time_in);
+        cv.put(ALLOWED_ENTRY,allowedEntry);
+        cv.put(COMMON_AREAS_SERVICED, commonAreasServiced);
 
-        long result = db.insert(PestDBData.TABLE_DAILYLOG, PestDBData.ADDEN_COMMENT, cv);
+        long result = db.insert(TABLE_DAILYLOG, ADDEN_COMMENT, cv);
         db.close();
         Log.i("insert completed", String.valueOf(result));
         return result;
     }
+    //there is no way to update any of these settings after initial save...
+    //should this be changed if so where?
 
+    //the only update that is necessary is to update the adden comments .. should this be removed from earlier db initialisation
+    // because there will be nothing to input??
+
+    public long updateMultipleUnitGeneral_Data_AddenComment(int id , String addenComment){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Log.i("Multiple Unit General Data update", "Adding AddenComment "+ addenComment+" to id: "+id);
+
+        ContentValues cv = new ContentValues();
+        cv.put (ADDEN_COMMENT, addenComment);
+
+        long result = db.update(TABLE_MULTIPLE_UNIT_GEN_DATA, cv, KEY_ID +" = "+id, null);
+
+        Log.i("insert completed MultipleUnitGeneralData - addenComment", String.valueOf(result));
+        return result;
+    }
 
     //Functions for Multiple_unit_details_data table
 /*
@@ -369,30 +399,45 @@ public class PestDBData extends SQLiteOpenHelper {
             + SIGNATURE_UNIT + " text, "
             + ADDEN_COMMENT_UNIT + " text );";*/
 
+
+    //same question as above if should all of these be used in initial insert if they cannot all be added.
     public long insertMultipleUnitDetailsData( Context c, String areaUnitNum, int serviced, int chemUsed, int recipe, int appLocation,
-                                               String chemSite, int pest, String sigUnit, String addenCommentUnit ){
+                                               String chemSite, int pest, String sigUnit){
         Log.i("Insert multiple unit details data", areaUnitNum+" "+ serviced+" "+chemUsed+" "+recipe+" "+ appLocation+" "+
-                chemSite+" "+ pest+" "+ sigUnit+" "+ addenCommentUnit );
+                chemSite+" "+ pest+" "+ sigUnit );
 
         PestDBData dbHelper = new PestDBData(c);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
-        cv.put(PestDBData.AREA_UNIT_NUM ,areaUnitNum);
-        cv.put(PestDBData.SERVICED ,serviced);
-        cv.put(PestDBData.CHEM_USED ,chemUsed);
-        cv.put(PestDBData.RECIPE ,recipe);
-        cv.put(PestDBData.APPLICATION_LOCATION , appLocation);
-        cv.put(PestDBData.CHEMICAL_SITE ,chemSite);
-        cv.put(PestDBData.TARGET_PEST ,pest);
-        cv.put(PestDBData.SIGNATURE_UNIT ,sigUnit);
-        cv.put(PestDBData.ADDEN_COMMENT_UNIT ,addenCommentUnit);
+        cv.put(AREA_UNIT_NUM ,areaUnitNum);
+        cv.put(SERVICED ,serviced);
+        cv.put(CHEM_USED ,chemUsed);
+        cv.put(RECIPE ,recipe);
+        cv.put(APPLICATION_LOCATION , appLocation);
+        cv.put(CHEMICAL_SITE ,chemSite);
+        cv.put(TARGET_PEST ,pest);
+        cv.put(SIGNATURE_UNIT ,sigUnit);
 
-        long result = db.insert(PestDBData.CREATE_MULTIPLE_UNIT_DETAILS_TABLE, PestDBData.ADDEN_COMMENT_UNIT, cv);
+
+        long result = db.insert(CREATE_MULTIPLE_UNIT_DETAILS_TABLE, ADDEN_COMMENT_UNIT, cv);
         db.close();
         Log.i("insert completed", String.valueOf(result));
 
         return result;
     }
 
+    public long updateMultipleUnitDetailsData_AddenUnit (int id , String addenCommentUnit ) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Log.i("update Multiple Unit Details Data", "Adding adden unit comment "+ addenCommentUnit+" to id: "+id);
+
+        ContentValues cv = new ContentValues();
+        cv.put(ADDEN_COMMENT_UNIT, addenCommentUnit);
+
+        long result = db.update(TABLE_MULTIPLE_UNIT_DETAILS_DATA, cv, KEY_ID +" = "+id, null);
+        Log.i("adden unit comment added", String.valueOf(result));
+
+        return result;
+    }
 }

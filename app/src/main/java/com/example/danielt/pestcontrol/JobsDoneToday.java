@@ -1,7 +1,9 @@
 package com.example.danielt.pestcontrol;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -55,6 +57,14 @@ public class JobsDoneToday extends Fragment {
         timeJob1.setText(time);
 
 
+        //populate table with list of jobs to do
+        String dateData="", addressData = "";
+        //on click send data to pestconsultlog.java
+        SharedPreferences buildingData = getActivity().getSharedPreferences("buildingData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = buildingData.edit();
+        edit.putString("date", dateData);
+        edit.putString("Address", addressData);
+        edit.commit();
         //set page view
         return view;
     }
