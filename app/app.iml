@@ -83,9 +83,15 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="poi-scratchpad-3.11-20141221" level="project" />
+    <orderEntry type="library" exported="" name="poi-ooxml-schemas-3.11-20141221" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
+    <orderEntry type="library" exported="" name="poi-examples-3.11-20141221" level="project" />
+    <orderEntry type="library" exported="" name="poi-ooxml-3.11-20141221" level="project" />
+    <orderEntry type="library" exported="" name="poi-excelant-3.11-20141221" level="project" />
+    <orderEntry type="library" exported="" name="poi-3.11-20141221" level="project" />
   </component>
 </module>
 
